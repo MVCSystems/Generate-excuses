@@ -1,11 +1,27 @@
-/* eslint-disable */
-import "bootstrap";
-import "./style.css";
+// Usando JavaScript, crea una función que genere y devuelva una excusa aleatoria con la siguiente estructura:
+// Para crear una excusa consistente, tienes que concatenar un elemento de cada array o arreglo en el orden correcto.
+// Usa la función onload y establece la excusa en el innerHTML del elemento HTML #excuse.
+// src/app.js
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
+// Función para generar una excusa aleatoria
+function generateExcuse() {
+    const excuses = [
+        "My dog eat my homework.",
+        "I was abducted by aliens.",
+        "I lost track of time.",
+        "My internet was down.",
+        "I had a family emergency."
+    ];
+    const randomIndex = Math.floor(Math.random() * excuses.length);
+    return excuses[randomIndex];
+}
 
-window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
-};
+// Función para actualizar la excusa en el DOM
+function updateExcuse() {
+    const excuseElement = document.getElementById('excuse');
+    excuseElement.textContent = generateExcuse();
+}
+
+// Agregar el evento al botón
+document.getElementById('excuse-button').addEventListener('click', updateExcuse);
+
