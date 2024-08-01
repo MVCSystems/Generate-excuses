@@ -1,3 +1,10 @@
+
+/* eslint-disable */
+import "bootstrap";
+import "./style.css";
+
+import "./assets/img/rigo-baby.jpg";
+import "./assets/img/4geeks.ico";
 // Usando JavaScript, crea una función que genere y devuelva una excusa aleatoria con la siguiente estructura:
 // Para crear una excusa consistente, tienes que concatenar un elemento de cada array o arreglo en el orden correcto.
 // Usa la función onload y establece la excusa en el innerHTML del elemento HTML #excuse.
